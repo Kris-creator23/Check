@@ -12,3 +12,4 @@ Tämä on staattinen GitHub Pages -sivusto Check-palvelulle.
 ## GitHub Pages
 
 Lataa repositorion juureen nämä tiedostot: `index.html`, `styles.css`, `privacy.html`, `terms.html`, `README.md`.
+Updated.

@@ -1,39 +1,14 @@
-# ReceiptFlow landing page
+# Check landing page
 
-Это статический сайт для GitHub Pages. Ему не нужны сборка, Node.js, конструктор или платная подписка.
+Tämä on staattinen GitHub Pages -sivusto Check-palvelulle.
 
-## Что поменять перед публикацией
+## Ennen julkaisua
 
-1. Замените `ReceiptFlow` на настоящее название продукта, если название будет другим.
-2. Замените `hello@example.com` во всех файлах на вашу почту.
-3. Проверьте цену в блоке `Early Access`.
-4. Обновите тексты `privacy.html` и `terms.html` под реальные условия продукта.
-5. Когда появится оплата, замените ссылки `mailto:` на ссылку Stripe, Paddle или Lemon Squeezy checkout.
+1. Yhteyssähköposti on asetettu: `arthausfi@gmail.com`.
+2. Tarkista hinnat: Basic 19 €/kk, Pro 39 €/kk, Premium 89 €/kk.
+3. Päivitä `privacy.html` ja `terms.html` lopullisten maksupalveluiden ja tietojen käsittelyn mukaan.
+4. Kun rekisteröinti ja maksut ovat valmiit, vaihda `mailto:`-linkit oikeisiin rekisteröinti- tai checkout-linkkeihin.
 
-## Как открыть локально
+## GitHub Pages
 
-Откройте файл `index.html` в браузере.
-
-## Как выложить на GitHub Pages
-
-1. Создайте новый репозиторий на GitHub.
-2. Загрузите в него файлы из этой папки: `index.html`, `styles.css`, `privacy.html`, `terms.html`, `README.md`.
-3. Откройте настройки репозитория.
-4. Перейдите в `Pages`.
-5. В разделе `Build and deployment` выберите:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-6. Сохраните настройки.
-7. Через несколько минут GitHub покажет ссылку на сайт.
-
-## Как подключить свой домен
-
-1. Купите домен у любого регистратора.
-2. В настройках GitHub Pages добавьте домен в поле `Custom domain`.
-3. У регистратора настройте DNS по инструкции GitHub Pages.
-4. Включите `Enforce HTTPS`.
-
-## Важно
-
-Тексты Privacy Policy и Terms of Use здесь являются стартовым шаблоном, а не юридической консультацией. Перед продажей продукта их лучше проверить под вашу реальную схему хранения данных, платежей и поддержки.
+Lataa repositorion juureen nämä tiedostot: `index.html`, `styles.css`, `privacy.html`, `terms.html`, `README.md`.

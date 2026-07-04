@@ -1,225 +1,60 @@
 <!doctype html>
-<html lang="ru">
+<html lang="fi">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ReceiptFlow for Fennoa</title>
-    <meta
-      name="description"
-      content="Mac-приложение, которое помогает автоматически загружать чеки в Fennoa из выбранной папки."
-    />
+    <title>Check | Kuittien automaatio Fennoaan</title>
+    <meta name="description" content="Check vie kuitit valitusta kansiosta Fennoaan automaattisesti." />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="ReceiptFlow">
-        <span class="brand-mark">RF</span>
-        <span>ReceiptFlow</span>
-      </a>
-      <nav class="nav" aria-label="Главная навигация">
-        <a href="#how">Как работает</a>
-        <a href="#security">Безопасность</a>
-        <a href="#pricing">Цена</a>
-        <a href="#faq">FAQ</a>
+      <a class="brand" href="index.html" aria-label="Check"><span class="brand-mark">C</span><span>Check</span></a>
+      <nav class="nav" aria-label="P&auml;&auml;navigaatio">
+        <a href="#how">Miten toimii</a><a href="#pricing">Hinnat</a><a href="#signup">Rekister&ouml;inti</a><a href="#security">Tietoturva</a><a href="#faq">FAQ</a>
       </nav>
-      <a class="header-cta" href="mailto:arthausfi@gmail.com?subject=Хочу попробовать ReceiptFlow">Ранний доступ</a>
+      <a class="header-cta" href="#trial">Aloita kokeilu</a>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Mac-приложение для Fennoa</p>
-          <h1>Чеки попадают в бухгалтерию без ручной загрузки</h1>
-          <p class="hero-text">
-            ReceiptFlow берет файлы из выбранной папки, открывает Fennoa, загружает чеки,
-            заполняет нужные поля и сохраняет результат. Пользователь вводит свои данные
-            один раз, а дальше приложение работает само.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="mailto:arthausfi@gmail.com?subject=Хочу попробовать ReceiptFlow">
-              Получить ранний доступ
-            </a>
-            <a class="button secondary" href="#security">Как защищены данные</a>
-          </div>
-          <dl class="hero-stats" aria-label="Ключевые преимущества">
-            <div>
-              <dt>0</dt>
-              <dd>паролей в коде</dd>
-            </div>
-            <div>
-              <dt>1</dt>
-              <dd>папка для чеков</dd>
-            </div>
-            <div>
-              <dt>Mac</dt>
-              <dd>локальная работа</dd>
-            </div>
-          </dl>
+          <p class="eyebrow">Mac-sovellus Fennoa-k&auml;ytt&auml;jille</p>
+          <h1>Kuitit Fennoaan ilman k&auml;sin teht&auml;v&auml;&auml; lataamista</h1>
+          <p class="hero-text">Check hakee kuitit valitusta kansiosta, kirjautuu Fennoaan, lataa tiedostot, t&auml;ytt&auml;&auml; tarvittavat kent&auml;t ja tallentaa ne kirjanpitoon. K&auml;ytt&auml;j&auml; m&auml;&auml;ritt&auml;&auml; asetukset kerran, ja sovellus hoitaa toistuvan ty&ouml;n.</p>
+          <div class="hero-actions"><a class="button primary" href="#trial">Aloita 7 p&auml;iv&auml;n kokeilu</a><a class="button secondary" href="#pricing">Katso hinnat</a></div>
+          <dl class="hero-stats" aria-label="P&auml;&auml;kohdat"><div><dt>7 pv</dt><dd>maksuton kokeilu</dd></div><div><dt>50-500</dt><dd>kuittia kuukaudessa</dd></div><div><dt>Mac</dt><dd>paikallinen sovellus</dd></div></dl>
         </div>
-
-        <div class="product-visual" aria-label="Пример окна приложения">
-          <div class="window">
-            <div class="window-bar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="app-panel">
-              <div class="status-card active">
-                <span class="status-dot"></span>
-                <div>
-                  <strong>Fennoa подключена</strong>
-                  <p>Данные входа хранятся в macOS Keychain</p>
-                </div>
-              </div>
-              <div class="folder-row">
-                <span class="folder-icon"></span>
-                <div>
-                  <strong>Папка чеков</strong>
-                  <p>/Receipts/To upload</p>
-                </div>
-              </div>
-              <div class="queue">
-                <div class="queue-head">
-                  <strong>Очередь загрузки</strong>
-                  <span>Сегодня</span>
-                </div>
-                <div class="receipt done">
-                  <span>invoice-1042.pdf</span>
-                  <b>Сохранен</b>
-                </div>
-                <div class="receipt progress">
-                  <span>receipt-market.jpg</span>
-                  <b>Заполняется</b>
-                </div>
-                <div class="receipt">
-                  <span>fuel-0704.pdf</span>
-                  <b>Ожидает</b>
-                </div>
-              </div>
-              <button class="mock-button" type="button">Запустить обработку</button>
-            </div>
-          </div>
+        <div class="product-visual" aria-label="Esimerkki Check-sovelluksen n&auml;kym&auml;st&auml;">
+          <div class="window"><div class="window-bar"><span></span><span></span><span></span></div><div class="app-panel">
+            <div class="status-card active"><span class="status-dot"></span><div><strong>Fennoa yhdistetty</strong><p>Kirjautumistiedot s&auml;ilytet&auml;&auml;n macOS Keychainissa</p></div></div>
+            <div class="folder-row"><span class="folder-icon"></span><div><strong>Kuittikansio</strong><p>/Receipts/To upload</p></div></div>
+            <div class="queue"><div class="queue-head"><strong>Latausjono</strong><span>T&auml;n&auml;&auml;n</span></div><div class="receipt done"><span>invoice-1042.pdf</span><b>Tallennettu</b></div><div class="receipt progress"><span>receipt-market.jpg</span><b>T&auml;ytet&auml;&auml;n</b></div><div class="receipt"><span>fuel-0704.pdf</span><b>Odottaa</b></div></div>
+            <button class="mock-button" type="button">K&auml;ynnist&auml; k&auml;sittely</button>
+          </div></div>
         </div>
       </section>
 
-      <section class="section intro">
-        <div>
-          <p class="eyebrow">Для кого</p>
-          <h2>Для предпринимателей и бухгалтеров, которые уже работают в Fennoa</h2>
-        </div>
-        <p>
-          Продукт убирает повторяющуюся работу: скачать чек, открыть Fennoa, загрузить файл,
-          дождаться распознавания, проверить поля и сохранить. Вместо этого пользователь
-          кладет чеки в одну папку и видит понятный журнал результата.
-        </p>
-      </section>
+      <section class="section intro"><div><p class="eyebrow">Kenelle</p><h2>Yritt&auml;jille, taloushallinnon tekij&ouml;ille ja Fennoaa k&auml;ytt&auml;ville yrityksille</h2></div><p>Check poistaa toistuvan ty&ouml;n: kuittien etsimisen, Fennoan avaamisen, tiedostojen lataamisen, kenttien t&auml;ytt&auml;misen ja tallentamisen. K&auml;ytt&auml;j&auml; siirt&auml;&auml; kuitit yhteen kansioon ja n&auml;kee selke&auml;st&auml; lokista, mit&auml; on k&auml;sitelty.</p></section>
 
-      <section class="section steps" id="how">
-        <p class="eyebrow">Как работает</p>
-        <h2>Простой сценарий без лишних настроек</h2>
-        <div class="grid three">
-          <article>
-            <span class="step-number">01</span>
-            <h3>Пользователь входит в Fennoa</h3>
-            <p>Логин и пароль вводятся внутри приложения и сохраняются в системной связке ключей macOS.</p>
-          </article>
-          <article>
-            <span class="step-number">02</span>
-            <h3>Выбирает папку с чеками</h3>
-            <p>ReceiptFlow следит за выбранной папкой или запускается вручную, когда это удобно.</p>
-          </article>
-          <article>
-            <span class="step-number">03</span>
-            <h3>Получает готовый журнал</h3>
-            <p>После загрузки приложение показывает, какие чеки сохранены, а какие требуют внимания.</p>
-          </article>
-        </div>
-      </section>
+      <section class="section steps" id="how"><p class="eyebrow">Miten toimii</p><h2>Kolme vaihetta k&auml;ytt&ouml;&ouml;nottoon</h2><div class="grid three"><article><span class="step-number">01</span><h3>Kirjaudu sis&auml;&auml;n</h3><p>K&auml;ytt&auml;j&auml; luo Check-tilin omalla s&auml;hk&ouml;postilla ja salasanalla, Googlella tai s&auml;hk&ouml;postilinkill&auml;.</p></article><article><span class="step-number">02</span><h3>Yhdist&auml; Fennoa</h3><p>Fennoa-tunnukset tallennetaan paikallisesti macOS Keychainiin, ei sovelluksen koodiin.</p></article><article><span class="step-number">03</span><h3>Valitse kuittikansio</h3><p>Check hakee uudet kuitit valitusta kansiosta ja n&auml;ytt&auml;&auml; k&auml;sittelyn tulokset lokissa.</p></article></div></section>
 
-      <section class="section security" id="security">
-        <div class="security-copy">
-          <p class="eyebrow">Конфиденциальность</p>
-          <h2>Данные остаются на Mac пользователя</h2>
-          <p>
-            ReceiptFlow спроектирован так, чтобы не хранить пароли в коде и не отправлять чеки
-            на сторонний сервер без явного согласия. Пароль хранится через macOS Keychain,
-            а путь к папке и журнал обработки сохраняются локально.
-          </p>
-        </div>
-        <div class="security-list">
-          <div>
-            <strong>Keychain</strong>
-            <span>Пароли не лежат в обычных файлах.</span>
-          </div>
-          <div>
-            <strong>Локальная обработка</strong>
-            <span>Чеки берутся из выбранной папки на компьютере.</span>
-          </div>
-          <div>
-            <strong>Журнал без лишнего</strong>
-            <span>Ошибки показываются без раскрытия паролей и сессий.</span>
-          </div>
-        </div>
-      </section>
+      <section class="section pricing" id="pricing"><p class="eyebrow">Hinnat</p><h2>Valitse kuittim&auml;&auml;r&auml;&auml;n sopiva paketti</h2><div class="pricing-grid">
+        <article class="plan-card"><div><h3>Basic</h3><p>Pienelle yritykselle tai kevyelle kuukausik&auml;yt&ouml;lle.</p></div><div class="plan-price"><strong>19 &euro;</strong><span>/ kk</span></div><ul><li>Enint&auml;&auml;n 50 kuittia kuukaudessa</li><li>1 Fennoa-ymp&auml;rist&ouml;</li><li>Paikallinen kuittikansio</li><li>7 p&auml;iv&auml;n maksuton kokeilu</li></ul><a class="button primary" href="#trial">Aloita Basic</a></article>
+        <article class="plan-card featured"><div class="plan-badge">Suosituin</div><div><h3>Pro</h3><p>Aktiiviseen k&auml;ytt&ouml;&ouml;n, kun kuitteja kertyy s&auml;&auml;nn&ouml;llisesti.</p></div><div class="plan-price"><strong>39 &euro;</strong><span>/ kk</span></div><ul><li>Enint&auml;&auml;n 100 kuittia kuukaudessa</li><li>1-3 Fennoa-ymp&auml;rist&ouml;&auml;</li><li>K&auml;sittelyloki ja virheilmoitukset</li><li>7 p&auml;iv&auml;n maksuton kokeilu</li></ul><a class="button primary" href="#trial">Aloita Pro</a></article>
+        <article class="plan-card"><div><h3>Premium</h3><p>Yrityksille ja toimistoille, joilla on suurempi kuittim&auml;&auml;r&auml;.</p></div><div class="plan-price"><strong>89 &euro;</strong><span>/ kk</span></div><ul><li>Enint&auml;&auml;n 500 kuittia kuukaudessa</li><li>Useita asiakasprofiileja</li><li>Priorisoitu k&auml;ytt&ouml;&ouml;notto</li><li>Maksu kortilla tai yrityslaskulla</li></ul><a class="button primary" href="#trial">Aloita Premium</a></article>
+      </div></section>
 
-      <section class="section pricing" id="pricing">
-        <p class="eyebrow">Цена</p>
-        <h2>Запуск с ранним доступом</h2>
-        <div class="price-card">
-          <div>
-            <h3>Early Access</h3>
-            <p>Для первых пользователей, которые хотят попробовать автоматизацию и помочь довести продукт до идеального рабочего состояния.</p>
-          </div>
-          <div class="price">
-            <span>от</span>
-            <strong>19 €</strong>
-            <span>/ месяц</span>
-          </div>
-          <a class="button primary" href="mailto:arthausfi@gmail.com?subject=Хочу ранний доступ ReceiptFlow">
-            Записаться
-          </a>
-        </div>
-      </section>
+      <section class="section signup" id="signup"><div><p class="eyebrow">Rekister&ouml;inti ja maksut</p><h2>Kokeilu alkaa ilman maksutietoja</h2><p>Uusi k&auml;ytt&auml;j&auml; voi aloittaa 7 p&auml;iv&auml;n kokeilun ilman maksutietoja. Kun kokeilu p&auml;&auml;ttyy, Check pyyt&auml;&auml; valitsemaan maksutavan ja jatkaa tilausta valitulla paketilla.</p></div><div class="feature-list"><div><strong>Kirjautuminen</strong><span>S&auml;hk&ouml;posti ja salasana, Google-kirjautuminen tai s&auml;hk&ouml;postilinkki.</span></div><div><strong>Maksutavat</strong><span>Apple Pay, pankkikortti, MobilePay tai lasku yritykselle.</span></div><div><strong>Tilauksen hallinta</strong><span>K&auml;ytt&auml;j&auml; voi vaihtaa pakettia, lis&auml;t&auml; maksutiedot tai pyyt&auml;&auml; yrityslaskun.</span></div></div></section>
 
-      <section class="section faq" id="faq">
-        <p class="eyebrow">FAQ</p>
-        <h2>Частые вопросы</h2>
-        <div class="faq-list">
-          <details>
-            <summary>Это официальный продукт Fennoa?</summary>
-            <p>Нет. Это независимое приложение, которое помогает автоматизировать повторяющуюся работу в Fennoa.</p>
-          </details>
-          <details>
-            <summary>Где хранится пароль?</summary>
-            <p>В macOS Keychain. Пароль не должен храниться в коде, таблицах, логах или обычных файлах настроек.</p>
-          </details>
-          <details>
-            <summary>Что происходит, если Fennoa меняет интерфейс?</summary>
-            <p>Приложение может потребовать обновления. Поэтому ранняя версия будет быстро обновляться и показывать ошибки в журнале.</p>
-          </details>
-          <details>
-            <summary>Можно ли использовать для нескольких компаний?</summary>
-            <p>Это можно добавить как отдельный режим: выбор компании при настройке или отдельные профили для разных клиентов.</p>
-          </details>
-        </div>
-      </section>
+      <section class="trial-band" id="trial"><div><p class="eyebrow">Maksuton kokeilu</p><h2>Aloita Checkin k&auml;ytt&ouml; viikoksi</h2><p>Ensimm&auml;inen versio voidaan avata kutsulla. Kokeilun j&auml;lkeen sovellus pyyt&auml;&auml; maksutiedot ennen kuin kuukausitilaus jatkuu.</p></div><a class="button primary" href="mailto:arthausfi@gmail.com?subject=Haluan kokeilla Check-sovellusta">Pyyd&auml; kokeilukutsu</a></section>
 
-      <section class="final-cta">
-        <h2>Хотите попробовать на своих чеках?</h2>
-        <p>Напишите, и мы подготовим ранний доступ для Mac.</p>
-        <a class="button primary" href="mailto:arthausfi@gmail.com?subject=Хочу попробовать ReceiptFlow">
-          Написать
-        </a>
-      </section>
+      <section class="section security" id="security"><div class="security-copy"><p class="eyebrow">Tietoturva</p><h2>Fennoa-tunnukset eiv&auml;t kuulu koodiin</h2><p>Check on suunniteltu niin, ett&auml; k&auml;ytt&auml;j&auml;n Fennoa-salasana s&auml;ilyy macOS Keychainissa. Kuittikansio, k&auml;sittelyloki ja sovelluksen asetukset pidet&auml;&auml;n paikallisesti k&auml;ytt&auml;j&auml;n Macilla, ellei k&auml;ytt&auml;j&auml; erikseen ota k&auml;ytt&ouml;&ouml;n pilvipalvelua.</p></div><div class="security-list"><div><strong>macOS Keychain</strong><span>Salasanoja ei tallenneta tavallisiin asetustiedostoihin.</span></div><div><strong>Paikallinen k&auml;sittely</strong><span>Kuitit haetaan k&auml;ytt&auml;j&auml;n valitsemasta kansiosta.</span></div><div><strong>Selke&auml; loki</strong><span>Onnistuneet ja ep&auml;onnistuneet k&auml;sittelyt n&auml;kyv&auml;t k&auml;ytt&auml;j&auml;lle.</span></div></div></section>
+
+      <section class="section faq" id="faq"><p class="eyebrow">FAQ</p><h2>Usein kysytyt kysymykset</h2><div class="faq-list"><details><summary>Onko Check Fennoan virallinen sovellus?</summary><p>Ei. Check on itsen&auml;inen sovellus, joka auttaa automatisoimaan toistuvaa ty&ouml;t&auml; Fennoassa.</p></details><details><summary>Tarvitaanko maksutiedot kokeilun alussa?</summary><p>Ei. Kokeilu kest&auml;&auml; 7 p&auml;iv&auml;&auml;. Sen j&auml;lkeen sovellus pyyt&auml;&auml; maksutiedot ennen tilauksen jatkumista.</p></details><details><summary>Mit&auml; maksutapoja tuetaan?</summary><p>Suunnitellut maksutavat ovat Apple Pay, pankkikortti, MobilePay ja yrityslasku.</p></details><details><summary>Mit&auml; tapahtuu, jos kuukausiraja t&auml;yttyy?</summary><p>K&auml;ytt&auml;j&auml; voi odottaa seuraavaa laskutuskautta tai p&auml;ivitt&auml;&auml; suurempaan pakettiin.</p></details></div></section>
+
+      <section class="final-cta"><h2>Haluatko testata Checki&auml; omilla kuiteilla?</h2><p>Pyyd&auml; kokeilukutsu ja saat ohjeet Mac-sovelluksen k&auml;ytt&ouml;&ouml;nottoon.</p><a class="button primary" href="mailto:arthausfi@gmail.com?subject=Haluan kokeilla Check-sovellusta">Pyyd&auml; kokeilukutsu</a></section>
     </main>
-
-    <footer class="site-footer">
-      <span>© 2026 ReceiptFlow</span>
-      <div>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </div>
-    </footer>
+    <footer class="site-footer"><span>&copy; 2026 Check</span><div><a href="privacy.html">Tietosuojaseloste</a><a href="terms.html">K&auml;ytt&ouml;ehdot</a></div></footer>
   </body>
 </html>

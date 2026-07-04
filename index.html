@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ReceiptFlow for Fennoa</title>
+    <meta
+      name="description"
+      content="Mac-приложение, которое помогает автоматически загружать чеки в Fennoa из выбранной папки."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ReceiptFlow">
+        <span class="brand-mark">RF</span>
+        <span>ReceiptFlow</span>
+      </a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="#how">Как работает</a>
+        <a href="#security">Безопасность</a>
+        <a href="#pricing">Цена</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="mailto:hello@example.com?subject=Хочу попробовать ReceiptFlow">Ранний доступ</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Mac-приложение для Fennoa</p>
+          <h1>Чеки попадают в бухгалтерию без ручной загрузки</h1>
+          <p class="hero-text">
+            ReceiptFlow берет файлы из выбранной папки, открывает Fennoa, загружает чеки,
+            заполняет нужные поля и сохраняет результат. Пользователь вводит свои данные
+            один раз, а дальше приложение работает само.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:hello@example.com?subject=Хочу попробовать ReceiptFlow">
+              Получить ранний доступ
+            </a>
+            <a class="button secondary" href="#security">Как защищены данные</a>
+          </div>
+          <dl class="hero-stats" aria-label="Ключевые преимущества">
+            <div>
+              <dt>0</dt>
+              <dd>паролей в коде</dd>
+            </div>
+            <div>
+              <dt>1</dt>
+              <dd>папка для чеков</dd>
+            </div>
+            <div>
+              <dt>Mac</dt>
+              <dd>локальная работа</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="product-visual" aria-label="Пример окна приложения">
+          <div class="window">
+            <div class="window-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="app-panel">
+              <div class="status-card active">
+                <span class="status-dot"></span>
+                <div>
+                  <strong>Fennoa подключена</strong>
+                  <p>Данные входа хранятся в macOS Keychain</p>
+                </div>
+              </div>
+              <div class="folder-row">
+                <span class="folder-icon"></span>
+                <div>
+                  <strong>Папка чеков</strong>
+                  <p>/Receipts/To upload</p>
+                </div>
+              </div>
+              <div class="queue">
+                <div class="queue-head">
+                  <strong>Очередь загрузки</strong>
+                  <span>Сегодня</span>
+                </div>
+                <div class="receipt done">
+                  <span>invoice-1042.pdf</span>
+                  <b>Сохранен</b>
+                </div>
+                <div class="receipt progress">
+                  <span>receipt-market.jpg</span>
+                  <b>Заполняется</b>
+                </div>
+                <div class="receipt">
+                  <span>fuel-0704.pdf</span>
+                  <b>Ожидает</b>
+                </div>
+              </div>
+              <button class="mock-button" type="button">Запустить обработку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <div>
+          <p class="eyebrow">Для кого</p>
+          <h2>Для предпринимателей и бухгалтеров, которые уже работают в Fennoa</h2>
+        </div>
+        <p>
+          Продукт убирает повторяющуюся работу: скачать чек, открыть Fennoa, загрузить файл,
+          дождаться распознавания, проверить поля и сохранить. Вместо этого пользователь
+          кладет чеки в одну папку и видит понятный журнал результата.
+        </p>
+      </section>
+
+      <section class="section steps" id="how">
+        <p class="eyebrow">Как работает</p>
+        <h2>Простой сценарий без лишних настроек</h2>
+        <div class="grid three">
+          <article>
+            <span class="step-number">01</span>
+            <h3>Пользователь входит в Fennoa</h3>
+            <p>Логин и пароль вводятся внутри приложения и сохраняются в системной связке ключей macOS.</p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>Выбирает папку с чеками</h3>
+            <p>ReceiptFlow следит за выбранной папкой или запускается вручную, когда это удобно.</p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>Получает готовый журнал</h3>
+            <p>После загрузки приложение показывает, какие чеки сохранены, а какие требуют внимания.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section security" id="security">
+        <div class="security-copy">
+          <p class="eyebrow">Конфиденциальность</p>
+          <h2>Данные остаются на Mac пользователя</h2>
+          <p>
+            ReceiptFlow спроектирован так, чтобы не хранить пароли в коде и не отправлять чеки
+            на сторонний сервер без явного согласия. Пароль хранится через macOS Keychain,
+            а путь к папке и журнал обработки сохраняются локально.
+          </p>
+        </div>
+        <div class="security-list">
+          <div>
+            <strong>Keychain</strong>
+            <span>Пароли не лежат в обычных файлах.</span>
+          </div>
+          <div>
+            <strong>Локальная обработка</strong>
+            <span>Чеки берутся из выбранной папки на компьютере.</span>
+          </div>
+          <div>
+            <strong>Журнал без лишнего</strong>
+            <span>Ошибки показываются без раскрытия паролей и сессий.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing" id="pricing">
+        <p class="eyebrow">Цена</p>
+        <h2>Запуск с ранним доступом</h2>
+        <div class="price-card">
+          <div>
+            <h3>Early Access</h3>
+            <p>Для первых пользователей, которые хотят попробовать автоматизацию и помочь довести продукт до идеального рабочего состояния.</p>
+          </div>
+          <div class="price">
+            <span>от</span>
+            <strong>19 €</strong>
+            <span>/ месяц</span>
+          </div>
+          <a class="button primary" href="mailto:hello@example.com?subject=Хочу ранний доступ ReceiptFlow">
+            Записаться
+          </a>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <p class="eyebrow">FAQ</p>
+        <h2>Частые вопросы</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Это официальный продукт Fennoa?</summary>
+            <p>Нет. Это независимое приложение, которое помогает автоматизировать повторяющуюся работу в Fennoa.</p>
+          </details>
+          <details>
+            <summary>Где хранится пароль?</summary>
+            <p>В macOS Keychain. Пароль не должен храниться в коде, таблицах, логах или обычных файлах настроек.</p>
+          </details>
+          <details>
+            <summary>Что происходит, если Fennoa меняет интерфейс?</summary>
+            <p>Приложение может потребовать обновления. Поэтому ранняя версия будет быстро обновляться и показывать ошибки в журнале.</p>
+          </details>
+          <details>
+            <summary>Можно ли использовать для нескольких компаний?</summary>
+            <p>Это можно добавить как отдельный режим: выбор компании при настройке или отдельные профили для разных клиентов.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <h2>Хотите попробовать на своих чеках?</h2>
+        <p>Напишите, и мы подготовим ранний доступ для Mac.</p>
+        <a class="button primary" href="mailto:hello@example.com?subject=Хочу попробовать ReceiptFlow">
+          Написать
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 ReceiptFlow</span>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </footer>
+  </body>
+</html>
